@@ -2,39 +2,39 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dependencyinjection.Features.Default;
+package dependencyinjection.Features.Welcome;
 
-import dependencyinjection.MVC.IController;
+
 
 /**
  *
  * @author david
  */
-public class Feature {
+public class Welcome {
     
-    private FeatureView view = null;
+    private View view = null;
     
-    private FeatureModel model = null;
+    private Model model = null;
     
-    private FeatureController controller = null;
+    private Controller controller = null;
     
-    private FeatureDelegate delegate = null;
+    private Delegate delegate = null;
     
-    public Feature(){
+    public Welcome(){
         
-        this.delegate = new FeatureDelegate();
-        this.controller = new FeatureController();
+        this.delegate = new Delegate();
+        this.controller = new Controller();
         
-        this.view = new FeatureView();
+        this.view = new View();
         this.view.delegate = this.delegate;
         this.controller.loadView(this.view);
         
-        this.model = new FeatureModel();
+        this.model = new Model();
         
     
     }
     
-    public Feature( FeatureView view , FeatureModel model , FeatureController controller  )
+    public Welcome( View view , Model model , Controller controller  )
     {
         this.view = view;
         
@@ -45,7 +45,7 @@ public class Feature {
     }
     
     
-    public FeatureController getController()
+    public Controller getController()
     {
         return this.controller;
     }

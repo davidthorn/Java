@@ -5,7 +5,7 @@
 package dependencyinjection;
 
 import dependencyinjection.Features.Default.*;
-
+import dependencyinjection.Features.Welcome.*;
 
 /**
  *
@@ -19,9 +19,12 @@ public class DependencyInjection {
     public static void main(String[] args) {
     
         Feature feature = new Feature();
-        Controller controller = feature.getController();
+        Welcome welcome = new Welcome();
+        FeatureController controller = feature.getController();
+        Controller controller2 = welcome.getController();
         
         feature.execute();
+        welcome.execute();
         
     }
 }
