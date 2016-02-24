@@ -4,6 +4,9 @@
  */
 package dependencyinjection;
 
+import dependencyinjection.Features.Default.*;
+
+
 /**
  *
  * @author david
@@ -14,6 +17,11 @@ public class DependencyInjection {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        Feature feature = new Feature();
+        Controller controller = (Controller) feature.getController();
+        
+        feature.execute();
+        
     }
 }
