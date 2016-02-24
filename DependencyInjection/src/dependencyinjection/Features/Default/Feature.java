@@ -45,7 +45,7 @@ public class Feature {
     }
     
     
-    public IController getController()
+    public Controller getController()
     {
         return this.controller;
     }

@@ -19,7 +19,7 @@ public class DependencyInjection {
     public static void main(String[] args) {
     
         Feature feature = new Feature();
-        Controller controller = (Controller) feature.getController();
+        Controller controller = feature.getController();
         
         feature.execute();
         
